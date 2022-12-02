@@ -1,0 +1,31 @@
+﻿<Window x:Class="de3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:de3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" FontSize="20">
+    <Grid Loaded="Grid_Loaded">
+        <Label Content="Ma Sach" HorizontalAlignment="Left" Margin="100,50,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ten Sach" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tac Gia" HorizontalAlignment="Left" Margin="100,150,0,0" VerticalAlignment="Top"/>
+        <Label Content="So Trang" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Name="txtmasach" Margin="300,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35"/>
+        <TextBox HorizontalAlignment="Left" Name="txttensach" Margin="300,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35"/>
+        <TextBox HorizontalAlignment="Left" Name="txtsl" Margin="300,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35"/>
+
+        <ComboBox HorizontalAlignment="Left" Name="cbtacgia" Margin="300,150,0,0" VerticalAlignment="Top" Width="250" Height="35"/>
+        <Button Name="btnthem" Content="Them" HorizontalAlignment="Left" Margin="650,50,0,0" VerticalAlignment="Top" Width="100" Height="35" Click="btnthem_Click"/>
+        <Button Name="btntim" Content="Tim" HorizontalAlignment="Left" Margin="650,100,0,0" VerticalAlignment="Top" Width="100" Height="35" Click="btntim_Click"/>
+        <DataGrid Name="dssach" Margin="100, 280, 100, 100" AutoGenerateColumns="false">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ma Sach" Binding="{Binding Masach}"/>
+                <DataGridTextColumn Header="Ten Sach" Binding="{Binding Tensach}"/>
+                <DataGridTextColumn Header="Ma Tac Gia" Binding="{Binding Matg}"/>
+                <DataGridTextColumn Header="So Trang" Binding="{Binding Sotrang}"/>
+                <DataGridTextColumn Header="Gia Sach" Binding="{Binding Giasach}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
